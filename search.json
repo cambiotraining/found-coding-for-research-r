@@ -1,0 +1,530 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Coding for research in R",
+    "section": "",
+    "text": "Overview\nThese sessions provide an introduction to coding in R. The aim is to get you comfortable with coding techniques commonly used in scientific research.",
+    "crumbs": [
+      "Welcome",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "Coding for research in R",
+    "section": "",
+    "text": "Learning Objectives\n\n\n\n\nGet familiar with the R programming language\nLearn to visualise data\nBe able to manipulate and transform data\n\n\n\n\nTarget audience\nThis course is aimed at people without any prior programming experience. It does however, allow people with some experience to further enhance their knowledge through different level exercises.\n\n\nPrerequisites\nNo prerequisites.\n\n\n\nExercises\nExercises in these materials are labelled according to their level of difficulty:\n\n\n\n\n\n\n\nLevel\nDescription\n\n\n\n\n  \nExercises in level 1 are simpler and designed to get you familiar with the concepts and syntax covered in the course.\n\n\n  \nExercises in level 2 combine different concepts together and apply it to a given task.\n\n\n  \nExercises in level 3 require going beyond the concepts and syntax introduced to solve new problems.",
+    "crumbs": [
+      "Welcome",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#citation-authors",
+    "href": "index.html#citation-authors",
+    "title": "Coding for research in R",
+    "section": "Citation & authors",
+    "text": "Citation & authors\nPlease cite these materials if:\n\nYou adapted or used any of them in your own teaching.\nThese materials were useful for your research work. For example, you can cite us in the methods section of your paper: “We carried our analyses based on the recommendations in YourReferenceHere”.\n\n\nYou can cite these materials as:\n\nTavares, H., van Rongen, M., Cardona, A. (2024). Course Development Guidelines. https://cambiotraining.github.io/found-coding-for-research-r/\n\nOr in BibTeX format:\n@misc{YourReferenceHere,\n  author = {Tavares, Hugo and van Rongen, Martin and Cardona, Alexia},\n  month = {10},\n  title = {Course Development Guidelines},\n  url = {https://cambiotraining.github.io/found-coding-for-research-r/},\n  year = {2024}\n}\nAbout the authors:\nHugo Tavares  \nAffiliation: Cambridge Centre for Research Informatics Training Roles: writing - original draft; conceptualisation; software\n\nMartin van Rongen  \nAffiliation: Cambridge Centre for Research Informatics Training Roles: writing - review & editing; conceptualisation; software\n\nAlexia Cardona  \nAffiliation: Cambridge Centre for Research Informatics Training Roles: conceptualisation",
+    "crumbs": [
+      "Welcome",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgements",
+    "href": "index.html#acknowledgements",
+    "title": "Coding for research in R",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\n\nThese materials are based on the original course contents of the “Data Carpentry lesson in Ecology”.\nMichonneau F, Teal T, Fournier A, Seok B, Obeng A, Pawlik AN, Conrado AC, Woo K, Lijnzaad P, Hart T, White EP, Marwick B, Bolker B, Jordan KL, Ashander J, Dashnow H, Hertweck K, Cuesta SM, Becker EA, Guillou S, Shiklomanov A, Klinges D, Odom GJ, Jean M, Mislan KAS, Johnson K, Jahn N, Mannheimer S, Pederson S, Pletzer A, Fouilloux A, Switzer C, Bahlai C, Li D, Kerchner D, Rodriguez-Sanchez F, Rajeg GPW, Ye H, Tavares H, Leinweber K, Peck K, Lepore ML, Hancock S, Sandmann T, Hodges T, Tirok K, Jean M, Bailey A, von Hardenberg A, Theobold A, Wright A, Basu A, Johnson C, Voter C, Hulshof C, Bouquin D, Quinn D, Vanichkina D, Wilson E, Strauss E, Bledsoe E, Gan E, Fishman D, Boehm F, Daskalova G, Tavares H, Kaupp J, Dunic J, Keane J, Stachelek J, Herr JR, Millar J, Lotterhos K, Cranston K, Direk K, Tylén K, Chatzidimitriou K, Deer L, Tarkowski L, Chiapello M, Burle M, Ankenbrand M, Czapanskiy M, Moreno M, Culshaw-Maurer M, Koontz M, Weisner M, Johnston M, Carchedi N, Burge OR, Harrison P, Humburg P, Pauloo R, Peek R, Elahi R, Cortijo S, sfn_brt, Umashankar S, Goswami S, Sumedh, Yanco S, Webster T, Reiter T, Pearse W, Li Y (2019). “datacarpentry/R-ecology-lesson: Data Carpentry: Data Analysis and Visualization in R for Ecologists, June 2019.” doi: 10.5281/zenodo.3264888, “http://datacarpentry.org/R-ecology-lesson/”.",
+    "crumbs": [
+      "Welcome",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "setup.html",
+    "href": "setup.html",
+    "title": "Data & Setup",
+    "section": "",
+    "text": "Data\nThe data used in these materials is provided as a zip file. Download and unzip the folder to your Desktop to follow along with the materials.\nDownload",
+    "crumbs": [
+      "Welcome",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data & Setup</span>"
+    ]
+  },
+  {
+    "objectID": "setup.html#software",
+    "href": "setup.html#software",
+    "title": "Data & Setup",
+    "section": "Software",
+    "text": "Software\n\nQuarto\nTo develop and render the course materials website, you will need to install Quarto:\n\nDownload and install Quarto (available for all major OS).\nIf you are developing materials using executable .qmd documents, it is recommended that you also install the extensions for your favourite IDE (e.g. RStudio, VS Code).\nIf you are developing materials using JupyterLab or Jupyter Notebooks, please install Jupytext.\n\nUse the paired notebook feature to have synchronised .ipynb/.qmd files. Only .qmd files should be pushed to the repository (.ipynb files have been added to .gitignore).",
+    "crumbs": [
+      "Welcome",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data & Setup</span>"
+    ]
+  },
+  {
+    "objectID": "materials/01-intro-software.html",
+    "href": "materials/01-intro-software.html",
+    "title": "3  Getting started with coding",
+    "section": "",
+    "text": "3.1 Context\nWhy are we using a programming language? Link in with other courses (reproducible research, stats, visualisation etc)",
+    "crumbs": [
+      "Getting started with coding",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Getting started with coding</span>"
+    ]
+  },
+  {
+    "objectID": "materials/01-intro-software.html#working-directory",
+    "href": "materials/01-intro-software.html#working-directory",
+    "title": "3  Getting started with coding",
+    "section": "3.2 Working directory",
+    "text": "3.2 Working directory\n\nLO: understand why we use working directories\nLO: setting up an R project",
+    "crumbs": [
+      "Getting started with coding",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Getting started with coding</span>"
+    ]
+  },
+  {
+    "objectID": "materials/01-intro-software.html#working-with-r",
+    "href": "materials/01-intro-software.html#working-with-r",
+    "title": "3  Getting started with coding",
+    "section": "3.3 Working with R",
+    "text": "3.3 Working with R\n\n3.3.1 Scripts versus console\n\n\n3.3.2 Comments in code\n\n\n3.3.3 Code headings\nLO: Using # heading ---- syntax to organise your code\n\n\n3.3.4 Running code\nLO: running code (simple calculations)\n\n\n3.3.5 Functions and their arguments\nLO: functions & arguments\n\n\n3.3.6 Adding functionality using packages\nLO: adding functionality (installing + loading packages)",
+    "crumbs": [
+      "Getting started with coding",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Getting started with coding</span>"
+    ]
+  },
+  {
+    "objectID": "materials/01-intro-software.html#summary",
+    "href": "materials/01-intro-software.html#summary",
+    "title": "3  Getting started with coding",
+    "section": "3.4 Summary",
+    "text": "3.4 Summary\n\n\n\n\n\n\nKey points",
+    "crumbs": [
+      "Getting started with coding",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Getting started with coding</span>"
+    ]
+  },
+  {
+    "objectID": "materials/02-basic-objects-and-data-types.html",
+    "href": "materials/02-basic-objects-and-data-types.html",
+    "title": "4  Basic objects and data types",
+    "section": "",
+    "text": "4.1 Context\nWe’ve seen examples where we entered data directly into a function. Most of the time we have data from elsewhere, such as a spreadsheet. We’ll build up from a single object; vector; tabular data; brief mention of others (matrices, arrays - linking to day 3)",
+    "crumbs": [
+      "Getting started with coding",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Basic objects and data types</span>"
+    ]
+  },
+  {
+    "objectID": "materials/02-basic-objects-and-data-types.html#objects",
+    "href": "materials/02-basic-objects-and-data-types.html#objects",
+    "title": "4  Basic objects and data types",
+    "section": "4.2 Objects",
+    "text": "4.2 Objects\n\n4.2.1 Creating objects\nLO: create objects\n\n\n4.2.2 Using objects\nLO: using objects (calculations etc)\n\n\n4.2.3 Vectors\n\nLO: create vectors\nLO: operations with vectors\nLO: subsetting (indices, conditionals with TRUE/FALSE)\n\n\n\n4.2.4 Dealing with missing data\n\nLO: why is missing data important?\nLO: good practices of dealing with missing data",
+    "crumbs": [
+      "Getting started with coding",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Basic objects and data types</span>"
+    ]
+  },
+  {
+    "objectID": "materials/02-basic-objects-and-data-types.html#summary",
+    "href": "materials/02-basic-objects-and-data-types.html#summary",
+    "title": "4  Basic objects and data types",
+    "section": "4.3 Summary",
+    "text": "4.3 Summary\n\n\n\n\n\n\nKey points",
+    "crumbs": [
+      "Getting started with coding",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Basic objects and data types</span>"
+    ]
+  },
+  {
+    "objectID": "materials/03-tabular-data.html",
+    "href": "materials/03-tabular-data.html",
+    "title": "5  Working with tabular data",
+    "section": "",
+    "text": "5.1 Context\nIn the previous section we dealt with single objects and vectors. Here we expand towards tabular data, which can be seen as a set of vectors grouped together.",
+    "crumbs": [
+      "Getting started with coding",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Working with tabular data</span>"
+    ]
+  },
+  {
+    "objectID": "materials/03-tabular-data.html#tabular-data",
+    "href": "materials/03-tabular-data.html#tabular-data",
+    "title": "5  Working with tabular data",
+    "section": "5.2 Tabular data",
+    "text": "5.2 Tabular data\n\nLO: understand data frames; matrices\nLO: exploring structure of tabular data",
+    "crumbs": [
+      "Getting started with coding",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Working with tabular data</span>"
+    ]
+  },
+  {
+    "objectID": "materials/03-tabular-data.html#working-with-data",
+    "href": "materials/03-tabular-data.html#working-with-data",
+    "title": "5  Working with tabular data",
+    "section": "5.3 Working with data",
+    "text": "5.3 Working with data\n\nLO: read in CSV file; TSV; specifying how to deal with missing data\nLO: selecting columns with $\nLO: brief introduction to subsetting with [row, column]",
+    "crumbs": [
+      "Getting started with coding",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Working with tabular data</span>"
+    ]
+  },
+  {
+    "objectID": "materials/03-tabular-data.html#saving",
+    "href": "materials/03-tabular-data.html#saving",
+    "title": "5  Working with tabular data",
+    "section": "5.4 Saving",
+    "text": "5.4 Saving\nLO: saving tables to file",
+    "crumbs": [
+      "Getting started with coding",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Working with tabular data</span>"
+    ]
+  },
+  {
+    "objectID": "materials/03-tabular-data.html#summary",
+    "href": "materials/03-tabular-data.html#summary",
+    "title": "5  Working with tabular data",
+    "section": "5.5 Summary",
+    "text": "5.5 Summary\n\n\n\n\n\n\nKey points",
+    "crumbs": [
+      "Getting started with coding",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Working with tabular data</span>"
+    ]
+  },
+  {
+    "objectID": "materials/04-plotting.html",
+    "href": "materials/04-plotting.html",
+    "title": "6  Plotting data",
+    "section": "",
+    "text": "6.1 Context\nWe now have a good grasp of how data is commonly structured, with variables in columns and observations in rows. This is the perfect format for visualising data.",
+    "crumbs": [
+      "Getting started with coding",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Plotting data</span>"
+    ]
+  },
+  {
+    "objectID": "materials/04-plotting.html#introducing-plotting",
+    "href": "materials/04-plotting.html#introducing-plotting",
+    "title": "6  Plotting data",
+    "section": "6.2 Introducing plotting",
+    "text": "6.2 Introducing plotting\n\n6.2.1 Start plotting\n\nLO: plotting with ggplot2\n\n\n\n6.2.2 Building up plots\n\nLO: layering plots\n\n\n\n6.2.3 Changing plots\n\nLO: changing aesthetics (colour, fill, transparency, size)",
+    "crumbs": [
+      "Getting started with coding",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Plotting data</span>"
+    ]
+  },
+  {
+    "objectID": "materials/04-plotting.html#summary",
+    "href": "materials/04-plotting.html#summary",
+    "title": "6  Plotting data",
+    "section": "6.3 Summary",
+    "text": "6.3 Summary\n\n\n\n\n\n\nKey points",
+    "crumbs": [
+      "Getting started with coding",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Plotting data</span>"
+    ]
+  },
+  {
+    "objectID": "materials/05-manipulating-columns.html",
+    "href": "materials/05-manipulating-columns.html",
+    "title": "7  Manipulating columns",
+    "section": "",
+    "text": "7.1 Context\nOn day 1 we learned to deal with tabular data. Sometimes we have many variables and we might only want to work with a subset of them.",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Manipulating columns</span>"
+    ]
+  },
+  {
+    "objectID": "materials/05-manipulating-columns.html#manipulation-of-variables",
+    "href": "materials/05-manipulating-columns.html#manipulation-of-variables",
+    "title": "7  Manipulating columns",
+    "section": "7.2 Manipulation of variables",
+    "text": "7.2 Manipulation of variables\n\n7.2.1 Selecting columns\nLO: selecting columns\n\n\n7.2.2 Renaming and reshuffling columns\nLO: renaming and reshuffling columns\n\n\n7.2.3 Creating new columns\nLO: creating new columns",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Manipulating columns</span>"
+    ]
+  },
+  {
+    "objectID": "materials/05-manipulating-columns.html#summary",
+    "href": "materials/05-manipulating-columns.html#summary",
+    "title": "7  Manipulating columns",
+    "section": "7.3 Summary",
+    "text": "7.3 Summary\n\n\n\n\n\n\nKey points",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Manipulating columns</span>"
+    ]
+  },
+  {
+    "objectID": "materials/06-chaining-operations.html",
+    "href": "materials/06-chaining-operations.html",
+    "title": "8  Chaining operations",
+    "section": "",
+    "text": "8.1 Context\nIn the section above we performed several operations on a single data set. Often there is a sequence to this, where the output of one operation gets fed into the next. We can simplify this by chaining commands.",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Chaining operations</span>"
+    ]
+  },
+  {
+    "objectID": "materials/06-chaining-operations.html#pipes",
+    "href": "materials/06-chaining-operations.html#pipes",
+    "title": "8  Chaining operations",
+    "section": "8.2 Pipes",
+    "text": "8.2 Pipes\nLO: using pipes",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Chaining operations</span>"
+    ]
+  },
+  {
+    "objectID": "materials/06-chaining-operations.html#summary",
+    "href": "materials/06-chaining-operations.html#summary",
+    "title": "8  Chaining operations",
+    "section": "8.3 Summary",
+    "text": "8.3 Summary\n\n\n\n\n\n\nKey points",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Chaining operations</span>"
+    ]
+  },
+  {
+    "objectID": "materials/07-manipulating-rows.html",
+    "href": "materials/07-manipulating-rows.html",
+    "title": "9  Manipulating rows",
+    "section": "",
+    "text": "9.1 Context\nData sets can contain large quantities of observations. Often we are only interested in part of the data at the time. We can deal with this by manipulating rows.",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Manipulating rows</span>"
+    ]
+  },
+  {
+    "objectID": "materials/07-manipulating-rows.html#manipulation-of-observations",
+    "href": "materials/07-manipulating-rows.html#manipulation-of-observations",
+    "title": "9  Manipulating rows",
+    "section": "9.2 Manipulation of observations",
+    "text": "9.2 Manipulation of observations\n\n9.2.1 Ordering rows\nLO: ordering rows\n\n\n9.2.2 Finding unique values\nLO: finding unique rows\n\n\n9.2.3 Filtering by condition\nLO: filtering rows by condition\n\n\n9.2.4 Missing data revisited\nLO: dealing with missing data",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Manipulating rows</span>"
+    ]
+  },
+  {
+    "objectID": "materials/07-manipulating-rows.html#summary",
+    "href": "materials/07-manipulating-rows.html#summary",
+    "title": "9  Manipulating rows",
+    "section": "9.3 Summary",
+    "text": "9.3 Summary\n\n\n\n\n\n\nKey points",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Manipulating rows</span>"
+    ]
+  },
+  {
+    "objectID": "materials/08-grouped-operations.html",
+    "href": "materials/08-grouped-operations.html",
+    "title": "10  Grouped operations",
+    "section": "",
+    "text": "10.1 Context\nWe’ve done different types of operations, all on the entire data set. Sometimes there is structure within the data, such as different groups (e.g. genotypes, patient cohorts, geographical areas etc). We might then want information on a group-by-group basis.",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Grouped operations</span>"
+    ]
+  },
+  {
+    "objectID": "materials/08-grouped-operations.html#summary-operations",
+    "href": "materials/08-grouped-operations.html#summary-operations",
+    "title": "10  Grouped operations",
+    "section": "10.2 Summary operations",
+    "text": "10.2 Summary operations\n\n10.2.1 Summarising data\nLO: summarising data\n\n\n10.2.2 Grouped summaries\nLO: grouped summaries",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Grouped operations</span>"
+    ]
+  },
+  {
+    "objectID": "materials/08-grouped-operations.html#counting-data",
+    "href": "materials/08-grouped-operations.html#counting-data",
+    "title": "10  Grouped operations",
+    "section": "10.3 Counting data",
+    "text": "10.3 Counting data\n\n10.3.1 Counting\nLO: counting\n\n\n10.3.2 Counting by group\nLO: counting data by group\n\n\n10.3.3 Counting missing values\nLO: counting with missing values",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Grouped operations</span>"
+    ]
+  },
+  {
+    "objectID": "materials/08-grouped-operations.html#grouped-operations",
+    "href": "materials/08-grouped-operations.html#grouped-operations",
+    "title": "10  Grouped operations",
+    "section": "10.4 Grouped operations",
+    "text": "10.4 Grouped operations\n\n10.4.1 Grouped filters\nLO: grouped filters\n\n\n10.4.2 Grouped changes\nLO: grouped mutate\n\n\n10.4.3 To ungroup or not ungroup\nLO: the importance of ungrouping",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Grouped operations</span>"
+    ]
+  },
+  {
+    "objectID": "materials/08-grouped-operations.html#summary",
+    "href": "materials/08-grouped-operations.html#summary",
+    "title": "10  Grouped operations",
+    "section": "10.5 Summary",
+    "text": "10.5 Summary\n\n\n\n\n\n\nKey points",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Grouped operations</span>"
+    ]
+  },
+  {
+    "objectID": "materials/09-data-types.html",
+    "href": "materials/09-data-types.html",
+    "title": "11  Dealing with different data types",
+    "section": "",
+    "text": "11.1 Context\nWe’ve seen some examples of where data behaved unexpectedly (e.g. example of box plots with years). So, it’s good to spend some time thinking about the differences in types of data. This is also very important when doing statistical analysis (link with Core statistics; GLM for count data)",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Dealing with different data types</span>"
+    ]
+  },
+  {
+    "objectID": "materials/09-data-types.html#quantitative-data",
+    "href": "materials/09-data-types.html#quantitative-data",
+    "title": "11  Dealing with different data types",
+    "section": "11.2 Quantitative data",
+    "text": "11.2 Quantitative data\n\n11.2.1 Discrete data\nLO: discrete data\n\n\n11.2.2 Continuous data\nLO: continuous data",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Dealing with different data types</span>"
+    ]
+  },
+  {
+    "objectID": "materials/09-data-types.html#qualitative-data",
+    "href": "materials/09-data-types.html#qualitative-data",
+    "title": "11  Dealing with different data types",
+    "section": "11.3 Qualitative data",
+    "text": "11.3 Qualitative data\n\n11.3.1 Categories\nLO: categories (nominal data)\n\n\n11.3.2 Ordinal data (factors)\nLO: factors (ordinal data)",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Dealing with different data types</span>"
+    ]
+  },
+  {
+    "objectID": "materials/09-data-types.html#dates-times",
+    "href": "materials/09-data-types.html#dates-times",
+    "title": "11  Dealing with different data types",
+    "section": "11.4 Dates & times",
+    "text": "11.4 Dates & times\nLO: formatting dates & times (lubridate package in R)",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Dealing with different data types</span>"
+    ]
+  },
+  {
+    "objectID": "materials/09-data-types.html#summary",
+    "href": "materials/09-data-types.html#summary",
+    "title": "11  Dealing with different data types",
+    "section": "11.5 Summary",
+    "text": "11.5 Summary\n\n\n\n\n\n\nKey points",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Dealing with different data types</span>"
+    ]
+  },
+  {
+    "objectID": "materials/10-reshaping-data.html",
+    "href": "materials/10-reshaping-data.html",
+    "title": "12  Reshaping data",
+    "section": "",
+    "text": "12.1 Context\nWe provided data in the best format. Not always the case, because people collect data in a format that works best for them - not the computer. Focus on columns (variables); rows (observations) and how this is needed for plotting, linking with the last part of day 1.",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Reshaping data</span>"
+    ]
+  },
+  {
+    "objectID": "materials/10-reshaping-data.html#from-wide-to-long",
+    "href": "materials/10-reshaping-data.html#from-wide-to-long",
+    "title": "12  Reshaping data",
+    "section": "12.2 From wide to long",
+    "text": "12.2 From wide to long\nLO: reshape data from “wide” to “long” (practise this on two different, but linked data sets - leading into combining data)",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Reshaping data</span>"
+    ]
+  },
+  {
+    "objectID": "materials/10-reshaping-data.html#from-long-to-wide",
+    "href": "materials/10-reshaping-data.html#from-long-to-wide",
+    "title": "12  Reshaping data",
+    "section": "12.3 From long to wide",
+    "text": "12.3 From long to wide\nLO: reshape from long to wide",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Reshaping data</span>"
+    ]
+  },
+  {
+    "objectID": "materials/10-reshaping-data.html#summary",
+    "href": "materials/10-reshaping-data.html#summary",
+    "title": "12  Reshaping data",
+    "section": "12.4 Summary",
+    "text": "12.4 Summary\n\n\n\n\n\n\nKey points",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Reshaping data</span>"
+    ]
+  },
+  {
+    "objectID": "materials/11-combining-data.html",
+    "href": "materials/11-combining-data.html",
+    "title": "13  Combining data",
+    "section": "",
+    "text": "13.1 Context\nData is often split over multiple tables. We saw this in the previous section. Sometimes we need to combine information from multiple sources.",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Combining data</span>"
+    ]
+  },
+  {
+    "objectID": "materials/11-combining-data.html#joining-tables",
+    "href": "materials/11-combining-data.html#joining-tables",
+    "title": "13  Combining data",
+    "section": "13.2 Joining tables",
+    "text": "13.2 Joining tables\n\n13.2.1 The importance of an indentifier\nLO: a common identifier (more generally, unique identifiers are really important - e.g. mention LMM)\n\n\n13.2.2 Joining tables\nLO: joining tables",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Combining data</span>"
+    ]
+  },
+  {
+    "objectID": "materials/11-combining-data.html#cleaning-data",
+    "href": "materials/11-combining-data.html#cleaning-data",
+    "title": "13  Combining data",
+    "section": "13.3 Cleaning data",
+    "text": "13.3 Cleaning data\n\n13.3.1 Variable naming\nLO: variable naming (janitor package)\n\n\n13.3.2 Encoding issues\nLO: encoding issues\n\n\n13.3.3 Missing data\nLO: dealing with missing data",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Combining data</span>"
+    ]
+  },
+  {
+    "objectID": "materials/11-combining-data.html#summary",
+    "href": "materials/11-combining-data.html#summary",
+    "title": "13  Combining data",
+    "section": "13.4 Summary",
+    "text": "13.4 Summary\n\n\n\n\n\n\nKey points",
+    "crumbs": [
+      "Data wrangling and visualisation",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Combining data</span>"
+    ]
+  }
+]
