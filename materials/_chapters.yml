@@ -3,3 +3,4 @@ book:
     - part: "Getting started with coding"
       chapters:
         - materials/01-intro-software.qmd
+        - materials/02-basic-objects-and-data-types.qmd

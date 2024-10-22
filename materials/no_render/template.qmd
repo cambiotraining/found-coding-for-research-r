@@ -1,0 +1,21 @@
+---
+title: Basic objects and data types
+---
+
+::: {.callout-tip}
+#### Learning objectives
+
+- 
+:::
+
+
+## Context
+
+
+## Summary
+
+::: {.callout-tip}
+#### Key points
+
+- 
+:::

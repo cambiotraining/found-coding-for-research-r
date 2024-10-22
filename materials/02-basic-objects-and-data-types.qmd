@@ -1,0 +1,38 @@
+---
+title: Basic objects and data types
+---
+
+::: {.callout-tip}
+#### Learning objectives
+
+- 
+:::
+
+
+## Context
+We’ve seen examples where we entered data directly into a function. Most of the time we have data from elsewhere, such as a spreadsheet. We’ll build up from a single object; vector; tabular data; brief mention of others (matrices, arrays - linking to day 3)
+
+## Objects
+
+### Creating objects
+LO: create objects
+
+### Using objects
+LO: using objects (calculations etc)
+
+### Vectors
+LO: create vectors
+LO: operations with vectors
+LO: subsetting (indices, conditionals with TRUE/FALSE)
+
+### Dealing with missing data
+LO: why is missing data important?
+LO: good practices of dealing with missing data
+
+## Summary
+
+::: {.callout-tip}
+#### Key points
+
+- 
+:::

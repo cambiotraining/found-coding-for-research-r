@@ -18,7 +18,7 @@ These sessions provide an introduction to coding in R. The aim is to get you com
 :::
 
 
-### Target Audience
+### Target audience
 
 This course is aimed at people without any prior programming experience. It does however, allow people with some experience to further enhance their knowledge through different level exercises.
 
@@ -40,7 +40,7 @@ Exercises in these materials are labelled according to their level of difficulty
 | {{< fa solid star >}} {{< fa solid star >}} {{< fa solid star >}} | Exercises in level 3 require going beyond the concepts and syntax introduced to solve new problems. |
 
 
-## Citation & Authors
+## Citation & authors
 
 Please cite these materials if:
 

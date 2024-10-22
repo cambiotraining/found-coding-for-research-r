@@ -3,7 +3,7 @@ title: Getting started with coding
 ---
 
 ::: {.callout-tip}
-#### Learning Objectives
+#### Learning objectives
 
 - Get familiar with R
 - Get to know RStudio
@@ -16,16 +16,25 @@ Why are we using a programming language? Link in with other courses (reproducibl
 
 ## Working directory
 
-LO: understand why we use working directories
-LO: setting up an R project
+* LO: understand why we use working directories
+* LO: setting up an R project
 
 ## Working with R
 
-LO: setting up scripts
-LO: comments
-LO: organising code, via headings
+### Scripts versus console
+
+### Comments in code
+
+### Code headings
+LO: Using `# heading ----` syntax to organise your code
+
+### Running code
 LO: running code (simple calculations)
+
+### Functions and their arguments
 LO: functions & arguments
+
+### Adding functionality using packages
 LO: adding functionality (installing + loading packages)
 
 
