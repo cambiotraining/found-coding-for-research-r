@@ -4,3 +4,14 @@ book:
       chapters:
         - materials/01-intro-software.qmd
         - materials/02-basic-objects-and-data-types.qmd
+        - materials/03-tabular-data.qmd
+        - materials/04-plotting.qmd
+    - part: "Data wrangling and visualisation"
+      chapters:
+        - materials/05-manipulating-columns.qmd
+        - materials/06-chaining-operations.qmd
+        - materials/07-manipulating-rows.qmd
+        - materials/08-grouped-operations.qmd
+        - materials/09-data-types.qmd
+        - materials/10-reshaping-data.qmd
+        - materials/11-combining-data.qmd

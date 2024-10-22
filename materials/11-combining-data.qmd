@@ -1,0 +1,42 @@
+---
+title: Combining data
+---
+
+::: {.callout-tip}
+#### Learning objectives
+
+- 
+:::
+
+
+## Context
+Data is often split over multiple tables. We saw this in the previous section. Sometimes we need to combine information from multiple sources.
+
+## Joining tables
+
+### The importance of an indentifier
+LO: a common identifier (more generally, unique identifiers are really important - e.g. mention LMM)
+
+### Joining tables
+LO:  joining tables
+
+
+## Cleaning data
+
+### Variable naming
+LO: variable naming (janitor package)
+
+### Encoding issues
+LO: encoding issues
+
+### Missing data
+LO: dealing with missing data
+
+
+## Summary
+
+::: {.callout-tip}
+#### Key points
+
+- 
+:::

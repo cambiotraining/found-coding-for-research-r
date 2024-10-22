@@ -1,0 +1,25 @@
+---
+title: Chaining operations
+---
+
+::: {.callout-tip}
+#### Learning objectives
+
+- 
+:::
+
+## Context
+In the section above we performed several operations on a single data set. Often there is a sequence to this, where the output of one operation gets fed into the next. We can simplify this by chaining commands.
+
+## Pipes
+LO: using pipes
+
+
+
+## Summary
+
+::: {.callout-tip}
+#### Key points
+
+- 
+:::

@@ -21,13 +21,15 @@ LO: create objects
 LO: using objects (calculations etc)
 
 ### Vectors
-LO: create vectors
-LO: operations with vectors
-LO: subsetting (indices, conditionals with TRUE/FALSE)
+
+* LO: create vectors
+* LO: operations with vectors
+* LO: subsetting (indices, conditionals with TRUE/FALSE)
 
 ### Dealing with missing data
-LO: why is missing data important?
-LO: good practices of dealing with missing data
+
+* LO: why is missing data important?
+* LO: good practices of dealing with missing data
 
 ## Summary
 

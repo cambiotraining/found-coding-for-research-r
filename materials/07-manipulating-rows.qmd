@@ -1,0 +1,37 @@
+---
+title: Manipulating rows
+---
+
+::: {.callout-tip}
+#### Learning objectives
+
+- 
+:::
+
+
+## Context
+Data sets can contain large quantities of observations. Often we are only interested in part of the data at the time. We can deal with this by manipulating rows.
+
+## Manipulation of observations
+
+### Ordering rows
+LO: ordering rows
+
+### Finding unique values
+LO: finding unique rows
+
+### Filtering by condition
+LO: filtering rows by condition
+
+### Missing data revisited
+LO: dealing with missing data
+
+
+
+## Summary
+
+::: {.callout-tip}
+#### Key points
+
+- 
+:::

@@ -1,0 +1,34 @@
+---
+title: Manipulating columns
+---
+
+::: {.callout-tip}
+#### Learning objectives
+
+- 
+:::
+
+
+## Context
+On day 1 we learned to deal with tabular data. Sometimes we have many variables and we might only want to work with a subset of them.
+
+## Manipulation of variables
+
+### Selecting columns
+LO: selecting columns
+
+### Renaming and reshuffling columns
+LO: renaming and reshuffling columns
+
+### Creating new columns
+LO: creating new columns
+
+
+
+## Summary
+
+::: {.callout-tip}
+#### Key points
+
+- 
+:::

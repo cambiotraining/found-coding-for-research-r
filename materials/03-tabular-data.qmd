@@ -1,0 +1,35 @@
+---
+title: Working with tabular data
+---
+
+::: {.callout-tip}
+#### Learning objectives
+
+- 
+:::
+
+
+## Context
+In the previous section we dealt with single objects and vectors. Here we expand towards tabular data, which can be seen as a set of vectors grouped together.
+
+## Tabular data
+
+* LO: understand data frames; matrices
+* LO: exploring structure of tabular data
+
+## Working with data
+
+* LO: read in CSV file; TSV; specifying how to deal with missing data
+* LO: selecting columns with $
+* LO: brief introduction to subsetting with [row, column]
+
+## Saving
+LO: saving tables to file
+
+## Summary
+
+::: {.callout-tip}
+#### Key points
+
+- 
+:::

@@ -1,0 +1,33 @@
+---
+title: Plotting data
+---
+
+::: {.callout-tip}
+#### Learning objectives
+
+- 
+:::
+
+## Context
+We now have a good grasp of how data is commonly structured, with variables in columns and observations in rows. This is the perfect format for visualising data.
+
+## Introducing plotting
+
+### Start plotting
+* LO: plotting with ggplot2
+
+### Building up plots
+* LO: layering plots
+
+### Changing plots
+* LO: changing aesthetics (colour, fill, transparency, size)
+
+
+
+## Summary
+
+::: {.callout-tip}
+#### Key points
+
+- 
+:::

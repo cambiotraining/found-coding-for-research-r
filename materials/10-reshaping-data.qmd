@@ -1,0 +1,28 @@
+---
+title: Reshaping data
+---
+
+::: {.callout-tip}
+#### Learning objectives
+
+- 
+:::
+
+
+## Context
+We provided data in the best format. Not always the case, because people collect data in a format that works best for them - not the computer. Focus on columns (variables); rows (observations) and how this is needed for plotting, linking with the last part of day 1.
+
+## From wide to long
+LO: reshape data from “wide” to “long” (practise this on two different, but linked data sets - leading into combining data)
+
+## From long to wide
+LO: reshape from long to wide
+
+
+## Summary
+
+::: {.callout-tip}
+#### Key points
+
+- 
+:::

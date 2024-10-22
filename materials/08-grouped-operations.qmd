@@ -1,0 +1,55 @@
+---
+title: Grouped operations
+---
+
+::: {.callout-tip}
+#### Learning objectives
+
+- 
+:::
+
+
+## Context
+We’ve done different types of operations, all on the entire data set. Sometimes there is structure within the data, such as different groups (e.g. genotypes, patient cohorts, geographical areas etc). We might then want information on a group-by-group basis.
+
+
+## Summary operations
+
+### Summarising data
+LO: summarising data
+
+### Grouped summaries
+LO: grouped summaries
+
+## Counting data
+
+### Counting
+LO: counting
+
+### Counting by group
+LO: counting data by group
+
+### Counting missing values
+LO: counting with missing values
+
+
+## Grouped operations
+
+### Grouped filters
+LO: grouped filters
+
+### Grouped changes
+LO: grouped mutate
+
+### To ungroup or not ungroup
+LO: the importance of ungrouping
+
+
+
+## Summary
+
+::: {.callout-tip}
+#### Key points
+
+- 
+:::
