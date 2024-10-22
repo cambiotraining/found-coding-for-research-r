@@ -1,0 +1,41 @@
+---
+title: Template Page
+---
+
+::: {.callout-tip}
+#### Learning Objectives
+
+- Get familiar with R
+- Get to know RStudio
+:::
+
+
+## Context
+
+Why are we using a programming language? Link in with other courses (reproducible research, stats, visualisation etc)
+
+## Working directory
+
+LO: understand why we use working directories
+LO: setting up an R project
+
+## Working with R
+
+LO: setting up scripts
+LO: comments
+LO: organising code, via headings
+LO: running code (simple calculations)
+LO: functions & arguments
+LO: adding functionality (installing + loading packages)
+
+
+
+
+
+## Summary
+
+::: {.callout-tip}
+#### Key points
+
+- 
+:::

@@ -1,0 +1,5 @@
+book:
+  chapters:
+    - part: "Getting started with coding"
+      chapters:
+        - materials/01-intro-software.qmd
