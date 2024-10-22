@@ -1,5 +1,5 @@
 ---
-title: Template Page
+title: Getting started with coding
 ---
 
 ::: {.callout-tip}

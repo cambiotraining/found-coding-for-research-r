@@ -56,7 +56,7 @@ book:
       - icon: mastodon
         href: https://genomic.social/@BioInfoCambs
         aria-label: Bioinformatics Training Facility Mastodon
-    title: "Course Development Guidelines"
+    title: "Coding for research in R"
   chapters:
     - part: "Welcome"
       chapters:
