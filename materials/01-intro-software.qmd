@@ -12,12 +12,161 @@ title: Getting started with coding
 
 ## Context
 
-Why are we using a programming language? Link in with other courses (reproducible research, stats, visualisation etc)
+### What is R? 
+
+![Rlogo](images/Rlogo.png){width=100px}
+
+R is a statistical programming language.  It is very popular in the data science field, including Bioinformatics.  The term "`R`" is used to refer to both the programming language and the software that interprets the scripts written using it.
+
+
+### Why learn R?
+
+**R does not involve lots of pointing and clicking**
+
+The learning curve might be steeper than with other software, but with R, the
+results of your analysis do not rely on remembering a succession of pointing
+and clicking, but instead on a series of written commands, and that's a good
+thing! So, if you want to redo your analysis because you collected more data,
+you don't have to remember which button you clicked in which order to obtain
+your results; you just have to run your script again.
+
+Working with scripts makes the steps you used in your analysis clear, and the
+code you write can be inspected by someone else who can give you feedback and
+spot mistakes.
+
+Working with scripts forces you to have a deeper understanding of what you are
+doing, and facilitates your learning and comprehension of the methods you use.
+
+**R code is great for reproducibility**
+
+Reproducibility is when someone else (including your future self) can obtain the
+same results from the same data set when using the same analysis.
+
+R integrates with other tools to generate reports from your code. If you
+collect more data, or fix a mistake in your dataset, the figures and the
+statistical tests in your manuscript are updated automatically after running the code again.
+
+An increasing number of journals and funding agencies expect analyses to be
+reproducible, so knowing R will give you an edge with these requirements.
+
+
+**R is interdisciplinary and extendable**
+
+With 10,000+ packages that can be installed to extend its capabilities, R
+provides a framework that allows you to combine statistical approaches from many
+scientific disciplines to best suit the analytical framework you need to analyze your
+data. For instance, R has packages for image analysis, GIS, time series, population
+genetics, and a lot more.
+
+**R works on data of different sizes**
+
+The skills you learn with R scale easily with the size of your dataset. Whether
+your dataset has hundreds or millions of lines, it won't make much difference to
+you.
+
+R is designed for data analysis. It comes with special data structures and data
+types that make handling of missing data and statistical factors convenient.
+
+R can connect to spreadsheets, databases, and many other data formats, on your
+computer or on the web.
+
+**R produces high-quality graphics**
+
+The plotting functionality in R is endless, and allow you to adjust any
+aspect of your graph to convey most effectively the message from your data.
+
+**R has great support**
+
+Thousands of people use R daily. Many of them are willing to help you through
+mailing lists and websites such as [Stack Overflow](https://stackoverflow.com/), or on the [Posit community](https://forum.posit.co/).
+
+**R is free, open-source and cross-platform**
+
+Anyone can inspect the source code to see how R works. Because of this
+transparency, there is less chance for mistakes, and if you (or someone else)
+find some, you can report and fix bugs.
+
+### What is RStudio?
+[RStudio](https://posit.co) is currently a very popular Integrated Development Environment (IDE) for working with R.  An IDE is an application used by software developers that facilitates programming by offering source code editing, building and debugging tools all integrated into one application.  To function correctly, RStudio needs R and therefore both need to be installed on your computer.
+
+The RStudio Desktop open-source product is free under the
+[Affero General Public License (AGPL) v3](https://www.gnu.org/licenses/agpl-3.0.en.html).  [Other versions of RStudio](https://posit.co/download/rstudio-desktop/) are also available.
+
+We will use RStudio IDE to write code, navigate the files on our computer,
+inspect the variables we are going to create, and visualize the plots we will
+generate. RStudio can also be used for other things (*e.g.,* version control,
+developing packages, writing Shiny apps) that we will not cover during the
+course
+
+![RStudio interface screenshot. Clockwise from top left: Source, Environment/History, Files/Plots/Packages/Help/Viewer, Console.](images/rstudio-screenshot.png)
+
+RStudio is divided into 4 "Panes": the **Source** for your scripts and documents
+(top-left, in the default layout), your **Environment/History** (top-right),
+your **Files/Plots/Packages/Help/Viewer** (bottom-right), and 
+the R **Console** (bottom-left). The placement of these
+panes and their content can be customized (see menu, Tools -> Global Options ->
+Pane Layout). 
+
+One of the advantages of using RStudio is that all the information
+you need to write code is available in a single window. Additionally, with many
+shortcuts, auto-completion, and highlighting for the major file types you use
+while developing in R, RStudio will make typing easier and less error-prone.
+
+::: {.callout-note}
+RStudio's default preferences generally work well, but saving a work space to
+`.RData` can be cumbersome, especially if you are working with larger data sets as this would save all the data that is loaded into R into the `.RData` file.  
+To turn that off, go to `Tools` --> `Global Options` and select the 'Never' option
+for `Save workspace to .RData' on exit.`
+
+![Set 'Save workspace to .RData on exit' to 'Never'](images/rstudio-preferences.png)
+:::
 
 ## Working directory
 
 * LO: understand why we use working directories
 * LO: setting up an R project
+
+### Keeping it all together
+
+Whenever we are working on a project, it is good practice to keep a set of related data, analyses, and text self-contained in a single folder, called the **working directory**. 
+
+Using a consistent folder structure across your projects will help keep things
+organized, and will also make it easy to find things in the future. This
+can be especially helpful when you have multiple projects. In general, you may
+create directories (folders) for **scripts**, **data**, and **documents**.
+
+ - **`data/`** Use this folder to store your raw data. For the sake
+   of transparency and [provenance](https://en.wikipedia.org/wiki/Provenance),
+   you should *always* keep a copy of your raw data accessible and do as much
+   of your data cleanup and pre-processing programmatically (*i.e.,* with scripts,
+   rather than manually). Separating raw data from processed data
+   is also a good idea. For example, you could have files
+   `data/raw/survey.plot1.txt` and `data/raw/survey.plot2.txt` kept separate from
+   a `data_output/survey.csv` file generated by the
+   `scripts/01.preprocess.survey.R` script.
+ - **`documents/`** This would be a place to keep documentation and other text documents
+ - **`scripts/`** This would be the location to keep your R scripts for
+   different analyses or plotting.
+
+You may want additional directories or sub directories depending on your project
+needs, but these should form the backbone of your working directory.
+
+![Example of a working directory structure.](images/working-directory-structure.png)
+
+### Creating a working directory
+
+Before starting to write code in RStudio, we need to create an R Project.  The idea behind an R project is  to have a space where you can keep all the files and settings associated with the project together.  In that way, next time you open the R Project it would be easier to resume work.  
+
+To create an "R Project":
+
+1. Start RStudio.
+2. Under the `File` menu, click on `New Project`. Choose `New Directory`, then
+  `New Project`.
+3. Enter a name for this new folder (or "directory"), and choose a convenient
+  location for it. This will be your **working directory** for the rest of the
+  day (*e.g.,* `~/intro-to-r`).
+4. Click on `Create Project`.
+5. (Optional) Open in new session
 
 ## Working with R
 
