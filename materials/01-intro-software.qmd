@@ -14,8 +14,6 @@ title: Getting started with coding
 
 ### What is R? 
 
-![Rlogo](images/Rlogo.png){width=100px}
-
 R is a statistical programming language.  It is very popular in the data science field, including Bioinformatics.  The term "`R`" is used to refer to both the programming language and the software that interprets the scripts written using it.
 
 
@@ -123,12 +121,27 @@ for `Save workspace to .RData' on exit.`
 
 ## Working directory
 
-* LO: understand why we use working directories
-* LO: setting up an R project
+Making it easy for yourself *and* R to find all your data, it's helpful to use the concept of a **working directory**. This is a folder that R uses as a starting point where it expects to find all of your data and scripts.
+
+All of the scripts within this folder can then use **relative paths** to files in the working directory that indicate where inside the project a file is located (as opposed to **absolute paths**, which
+point to where a file is on a specific computer). Working this way makes it
+a lot easier to move your project around on your computer and share it with
+others without worrying about whether or not the underlying scripts will still work.
+
+::: {.callout-important}
+## Relative versus absolute paths
+
+Relative paths are relative to a certain location on your computer. Absolute paths start from the absolute start of your hard drive. This is easiest illustrated with an example:
+
+**Relative path**: `data/data_01.csv`
+
+**Absolute path**: `C:/Users/User1/Documents/R/r-analysis/data/data_01.csv`
+
+:::
 
 ### Keeping it all together
 
-Whenever we are working on a project, it is good practice to keep a set of related data, analyses, and text self-contained in a single folder, called the **working directory**. 
+Whenever we are working on a project, it is good practice to keep a set of related data, analyses, and scripts contained in a single folder.
 
 Using a consistent folder structure across your projects will help keep things
 organized, and will also make it easy to find things in the future. This
@@ -155,7 +168,7 @@ needs, but these should form the backbone of your working directory.
 
 ### Creating a working directory
 
-Before starting to write code in RStudio, we need to create an R Project.  The idea behind an R project is  to have a space where you can keep all the files and settings associated with the project together.  In that way, next time you open the R Project it would be easier to resume work.  
+Before starting to write code in RStudio, we need to create an R Project.  The idea behind an R-project is to have a space where you can keep all the files and settings associated with the project together. That way, next time you open the R Project it would be easier to resume work. An R-project basically creates a folder with a shortcut in it (ending in `.RProj`). When you double-click on the shortcut, it opens RStudio and sets the working directory to that particular folder. 
 
 To create an "R Project":
 
@@ -168,17 +181,168 @@ To create an "R Project":
 4. Click on `Create Project`.
 5. (Optional) Open in new session
 
+R will show you your current working directory in the `Files` pane. Alternatively, you can get it by typing in and running the `getwd()` command.
+
+::: {.callout-important}
+Complete @ex-createwd before proceeding.
+:::
+
 ## Working with R
+
+The basis of programming is that we write down instructions for the computer to
+follow, and then we tell the computer to follow those instructions. We write, or
+*code*, instructions in R because it is a common language that both the computer
+and we can understand. We call the instructions *commands* and we tell the
+computer to follow the instructions by *executing* (also called *running*) those
+commands.
 
 ### Scripts versus console
 
+There are two main ways of interacting with R: by using the console or by using
+script files (plain text files that contain your code). The console pane (in
+RStudio, the bottom left panel) is the place where commands written in the R
+language can be typed and executed immediately by the computer. It is also where
+the results will be shown for commands that have been executed. You can type
+commands directly into the console and press `Enter` to execute those commands,
+but they will be forgotten when you close the session.
+
+Because we want our code and workflow to be reproducible, it is better to type
+the commands we want in the script editor, and save the script. This way, there
+is a complete record of what we did, and anyone (including our future selves!)
+can easily replicate the results on their computer.
+
+RStudio allows you to execute commands directly from the script editor by using
+the {{< kbd Control >}} + {{< kbd Enter >}} shortcut (on Macs, {{< kbd mac=Command >}} +
+{{< kbd mac=Return >}} will work, too). The command on the current line in the
+script (indicated by the cursor) or all of the commands in the currently
+selected text will be sent to the console and executed when you press
+{{< kbd Control >}} + {{< kbd Enter >}}. You can find other keyboard shortcuts in this [RStudio cheatsheet about the RStudio IDE (PDF)](https://rstudio.github.io/cheatsheets/rstudio-ide.pdf).
+
+::: {.callout-warning}
+## The R prompt
+
+If R is ready to accept commands, the R console shows a `>` prompt. If it
+receives a command (by typing, copy-pasting or sent from the script editor using
+{{< kbd Control >}} + {{< kbd Enter >}}), R will try to execute it, and when
+ready, will show the results and come back with a new `>` prompt to wait for new
+commands.
+
+If R is still waiting for you to enter more data because it isn't complete yet,
+the console will show a `+` prompt. It means that you haven't finished entering
+a complete command. This is because you have not 'closed' a parenthesis or
+quotation, i.e. you don't have the same number of left-parentheses as
+right-parentheses, or the same number of opening and closing quotation marks.
+When this happens, and you thought you finished typing your command, click
+inside the console window and press {{< kbd Escape >}}. This will cancel the incomplete
+command and return you to the `>` prompt.
+:::
+
 ### Comments in code
 
+It's always a good idea to add explanations to your code. We can do that with the hash tag `#` symbol, for example:
+
+```
+# This code calculates the sum of two numbers
+1 + 9
+```
+
+It's always a good idea to add lots of comments to your code. What makes sense to you in that moment, might not a week later. Similarly, when sharing code with colleagues and collaborators, it's always good to be as clear as possible.
+
 ### Code headings
-LO: Using `# heading ----` syntax to organise your code
+
+As you increase your code, your script can become quite long. Often we want to split analyses into multiple scripts, for example:
+
+* `01_preprocessing.R` may contain data cleaning steps
+* `02_exploration.R` may contain exploratory plots of your data
+* `03_analysis.R` could contain (statistical) analyses of your data
+* `04_figures.R` could contain code for figures, ready for publication
+
+Each of these files could be hundreds of lines long. So, keeping track of your code makes sense. We can do that with **code headings**, which use the `# heading ----` syntax. You can even add different heading levels, by increasing the number of `#` at the start.
+
+This creates a little table of contents in the bottom-left corner of the script pane:
+
+![Code headings](images/rstudio-codeheadings.png)
 
 ### Running code
-LO: running code (simple calculations)
+
+The simplest way of using R is to type directly into the console. For example, you can use R as a glorified calculator:
+
+```{r}
+3 + 5
+12 / 7
+```
+
+Running this directly in the console is not a good idea, since then we can't keep track of what we are doing. So, we first need to create a script to save our code in. Next, we can then play around.
+
+::: {.callout-important}
+Please complete @ex-createscript and @ex-runningcode.
+:::
+
+### Objects
+
+Just running lines of code can be helpful if you only need an answer, but in order to do useful and interesting things, we often need to save values so we can work with them.
+
+To do this, we *assign* values to *objects*. An object is acts as a container for that value.
+
+To create an object, we need to give it a name followed by the
+assignment operator `<-`, and the value we want to give it, for example:
+
+```{r}
+temperature <- 23
+```
+
+::: {.callout-important}
+## The assignment operator
+
+In R we use `<-` as the assignment operator. It assigns values on the right to objects on
+the left. So, after executing:
+
+```{r}
+#| eval: false
+
+x <- 3
+```
+
+the value of `x` is `3`. You can think of it as 3 **goes into** `x`.
+
+For historical reasons you can also use `=` for assignments, but not in every context. Because of the
+[slight](http://blog.revolutionanalytics.com/2008/12/use-equals-or-arrow-for-assignment.html)
+[differences](http://r.789695.n4.nabble.com/Is-there-any-difference-between-and-tp878594p878598.html)
+in syntax, it is good practice to always use `<-` for assignments.
+
+In RStudio, typing <kbd>Alt</kbd> + <kbd>-</kbd> (push <kbd>Alt</kbd> at the
+same time as the <kbd>-</kbd> key) will write ` <- ` in a single keystroke in a PC, while typing <kbd>Option</kbd> + <kbd>-</kbd> (push <kbd>Option</kbd> at the
+same time as the <kbd>-</kbd> key) does the same in a Mac.
+:::
+
+Objects can be given almost any name such as `x`, `current_temperature`, or
+`subject_id`. You want the object names to be explicit and short. There are some exceptions / considerations (see below).
+
+::: {.callout-warning}
+
+* Object names are not allowed to start with a number (`2x` is not valid, but `x2` is).
+* R is case sensitive (e.g., `weight_kg` is different from `Weight_kg`).
+* Some names are forbidden, because they are the names of fundamental functions in R (e.g.,
+`if`, `else`, `for`, see
+[here](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Reserved.html)
+for a complete list).
+* Generally, avoid using other function names (e.g., `c`, `T`, `mean`, `data`, `df`, `weights`), even if it is allowed. If in doubt, check the help to see if the name is already in use.
+* Avoid dots (`.`) within an object name as in `my.dataset`. There are many
+functions in R with dots in their names for historical reasons, but because dots
+have a special meaning in R (for methods) and other programming languages, it's
+best to avoid them.
+* It's important to be consistent in the **styling** of your
+code (where you put spaces, how you name objects, etc.). Using a consistent
+coding style makes your code clearer to read for your future self and your
+collaborators. In R, popular style guides are:
+  * [tidyverse's](http://style.tidyverse.org/).
+  * [Google's](https://google.github.io/styleguide/Rguide.xml)
+  
+You can install the [`lintr`](https://github.com/jimhester/lintr) package to automatically check
+for issues in the styling of your code.
+:::
+
+
 
 ### Functions and their arguments
 LO: functions & arguments
@@ -188,7 +352,46 @@ LO: adding functionality (installing + loading packages)
 
 
 
+## Exercises
 
+:::{.callout-exercise #ex-createwd}
+#### Creating a working directory
+{{< level 1 >}}
+
+Create a working directory called `intro-r`. When you've done this, add the following subfolders:
+
+* `data`
+* `scripts`
+* `images`
+
+**Note**: R is case-sensitive, so `data` is not treated the same way as `data`.
+:::
+
+:::{.callout-exercise #ex-createscript}
+#### Creating a script
+{{< level 1 >}}
+
+Create a script and save it as `session_01.R` in the `scripts` folder within your working directory.
+:::
+
+:::{.callout-exercise #ex-runningcode}
+#### Running code
+{{< level 1 >}}
+
+In your new script `session_01.R`, run some mathematical operations, such as:
+
+```{r}
+#| eval: false
+
+8 * 4
+6 - 9
+```
+
+:::{.callout-hint}
+Remember, you run the code using <kbd>Ctrl</kbd> + <kbd>Enter</kbd> (or <kbd>Command</kbd> + <kbd>Enter</kbd> on Mac).
+:::
+
+:::
 
 ## Summary
 
