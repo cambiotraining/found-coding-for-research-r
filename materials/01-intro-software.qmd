@@ -241,10 +241,13 @@ command and return you to the `>` prompt.
 
 It's always a good idea to add explanations to your code. We can do that with the hash tag `#` symbol, for example:
 
-```
+```{r}
+#| eval: false
+
 # This code calculates the sum of two numbers
 1 + 9
 ```
+
 
 It's always a good idea to add lots of comments to your code. What makes sense to you in that moment, might not a week later. Similarly, when sharing code with colleagues and collaborators, it's always good to be as clear as possible.
 
