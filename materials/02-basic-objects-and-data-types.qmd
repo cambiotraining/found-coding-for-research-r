@@ -1,5 +1,5 @@
 ---
-title: Basic objects and data types
+title: Objects & data types
 ---
 
 ::: {.callout-tip}

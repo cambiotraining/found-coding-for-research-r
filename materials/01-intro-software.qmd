@@ -1,5 +1,5 @@
 ---
-title: Getting started with coding
+title: Getting started
 ---
 
 ::: {.callout-tip}
