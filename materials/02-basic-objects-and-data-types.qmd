@@ -10,12 +10,75 @@ title: Basic objects and data types
 
 
 ## Context
-We’ve seen examples where we entered data directly into a function. Most of the time we have data from elsewhere, such as a spreadsheet. We’ll build up from a single object; vector; tabular data; brief mention of others (matrices, arrays - linking to day 3)
+
+We’ve seen examples where we entered data directly into a function. Most of the time we have data from elsewhere, such as a spreadsheet. In the previous section we created single objects. We’ll build up from this and introduce vectors and tabular data. We'll also briefly mention other data types, such as matrices, arrays.
 
 ## Objects
 
 ### Creating objects
-LO: create objects
+
+Just running lines of code can be helpful if you only need an answer, but in order to do useful and interesting things, we often need to save values so we can work with them.
+
+To do this, we *assign* values to *objects*. An object acts as a container for that value.
+
+To create an object, we need to give it a name followed by the
+assignment operator `<-`, and the value we want to give it, for example:
+
+```{r}
+temperature <- 23
+```
+
+::: {.callout-important}
+## The assignment operator
+
+In R we use `<-` as the assignment operator. It assigns values on the right to objects on
+the left. So, after executing:
+
+```{r}
+#| eval: false
+
+x <- 3
+```
+
+the value of `x` is `3`. You can think of it as 3 **goes into** `x`.
+
+For historical reasons you can also use `=` for assignments, but not in every context. Because of the
+[slight](http://blog.revolutionanalytics.com/2008/12/use-equals-or-arrow-for-assignment.html)
+[differences](http://r.789695.n4.nabble.com/Is-there-any-difference-between-and-tp878594p878598.html)
+in syntax, it is good practice to always use `<-` for assignments.
+
+In RStudio, typing <kbd>Alt</kbd> + <kbd>-</kbd> (push <kbd>Alt</kbd> at the
+same time as the <kbd>-</kbd> key) will write ` <- ` in a single keystroke on a PC, while typing <kbd>Option</kbd> + <kbd>-</kbd> (push <kbd>Option</kbd> at the
+same time as the <kbd>-</kbd> key) does the same on a Mac.
+:::
+
+Objects can be given almost any name such as `x`, `current_temperature`, or
+`subject_id`. You want the object names to be explicit and short. There are some exceptions / considerations (see below).
+
+::: {.callout-warning}
+## Restrictions on object names
+
+* Object names are not allowed to start with a number (`2x` is not valid, but `x2` is).
+* R is case sensitive (e.g., `weight_kg` is different from `Weight_kg`).
+* Some names are forbidden, because they are the names of fundamental functions in R (e.g.,
+`if`, `else`, `for`, see
+[here](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Reserved.html)
+for a complete list).
+* Generally, avoid using other function names (e.g., `c`, `T`, `mean`, `data`, `df`, `weights`), even if it is allowed. If in doubt, check the help to see if the name is already in use.
+* Avoid dots (`.`) within an object name as in `my.dataset`. There are many
+functions in R with dots in their names for historical reasons, but because dots
+have a special meaning in R (for methods) and other programming languages, it's
+best to avoid them.
+* It's important to be consistent in the **styling** of your
+code (where you put spaces, how you name objects, etc.). Using a consistent
+coding style makes your code clearer to read for your future self and your
+collaborators. In R, popular style guides are:
+  * [tidyverse's](http://style.tidyverse.org/).
+  * [Google's](https://google.github.io/styleguide/Rguide.xml)
+  
+You can install the [`lintr`](https://github.com/jimhester/lintr) package to automatically check
+for issues in the styling of your code.
+:::
 
 ### Using objects
 LO: using objects (calculations etc)
