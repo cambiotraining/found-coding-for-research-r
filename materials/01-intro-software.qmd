@@ -270,10 +270,22 @@ This creates a little table of contents in the bottom-left corner of the script 
 
 The simplest way of using R is to type directly into the console. For example, you can use R as a glorified calculator:
 
+::: {.panel-tabset group="language"}
+## R
+
 ```{r}
 3 + 5
 12 / 7
 ```
+
+## Python
+
+```{python}
+3 + 5
+12 / 7
+```
+
+:::
 
 Running code like this directly in the console is generally not a good idea, because then we can't keep track of what we are doing. So, we first need to create a script to save our code in. Then, we can then play around.
 
@@ -285,23 +297,42 @@ Please complete @ex-createscript and @ex-runningcode.
 
 Functions are "canned scripts" that automate more complicated sets of commands
 including operations assignments, etc. Many functions are predefined, or can be
-made available by importing R *packages* (more on that later). A function
+made available by importing *packages* (more on that later). A function
 usually takes one or more inputs called *arguments*. Functions often (but not
 always) return a *value*. A typical example would be the function `sqrt()`. The
 input (the argument) must be a number, and the return value (in fact, the
 output) is the square root of that number.
+
+::: {.panel-tabset group="language"}
+## R
 
 ```{r}
 #| eval: false
 sqrt(9)
 ```
 
+## Python
+
+The `sqrt()` function is not available by default, but is stored in the `math` module. Before we can use it, we need to load this module:
+
+```{python}
+import math
+```
+
+Next, we can use the `sqrt()` function, specifying that it comes from the `math`module. We separate the two with a full-stop (`.`):
+
+```{python}
+math.sqrt(9)
+```
+
+:::
+
 Here, the value `9` is given to the `sqrt()` function. This function
 calculates the square root, and returns the value. This function is very simple, because it takes just one argument.
 
 The return 'value' of a function need not be numerical (like that of `sqrt()`),
 and it also does not need to be a single item: it can be a set of things, or
-even a data set. We'll see that when we read data files into R.
+even a data set. We'll see that when we read data files.
 
 
 ### Arguments
@@ -315,15 +346,30 @@ of your choice which will be used instead of the default.
 
 Let's try a function that can take multiple arguments: `round()`.
 
+::: {.panel-tabset group="language"}
+## R
+
 ```{r}
 round(3.14159)
 ```
 
+## Python
+
+```{python}
+round(3.14159)
+```
+
+:::
+
 Here, we've called `round()` with just one argument, `3.14159`, and it has
 returned the value `3`.  That's because the default is to round to the nearest
 whole number. If we want more digits we can see how to do that by getting
-information about the `round` function.  We can use `args(round)` to find what 
-arguments it takes, or look at the help for this function using `?round`.
+information about the `round()` function.  
+
+::: {.panel-tabset group="language"}
+## R
+
+We can use `args(round)` to find what arguments it takes, or look at the help for this function using `?round`.
 
 ```{r}
 args(round)
@@ -352,7 +398,38 @@ And if you do name the arguments, you can switch their order:
 round(digits = 2, x = 3.14159)
 ```
 
-It's good practice to put the non-optional arguments (like the number you're rounding) first in your function call, and to then specify the names of all optional arguments.  If you don't, someone reading your code might have to look up the definition of a function with unfamiliar arguments to understand what you're doing.
+## Python
+We can use `help(round)` to find what arguments it takes.
+
+```{python}
+#| eval: false
+help(round)
+```
+
+We see that if we want a different number of digits, we can
+type `ndigits = 2` or however many we want. For example:
+
+```{python}
+round(3.14159, ndigits = 2)
+```
+
+If you provide the arguments in the exact same order as they are defined you
+don't have to name them:
+
+```{python}
+round(3.14159, 2)
+```
+
+Python still expects the arguments in the correct order, so this gives an error:
+
+```{python}
+#| eval: false
+round(ndigits = 2, 3.14159)
+```
+:::
+
+It's good practice be explicit about the names of the arguments. That way you can avoid confusion later on when looking back at your code or when sharing your code.
+
 
 ## Adding functionality using packages
 LO: adding functionality (installing + loading packages)

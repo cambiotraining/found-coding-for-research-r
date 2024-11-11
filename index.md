@@ -1,18 +1,18 @@
 ---
-title: "Coding for research in R"
-author: "Alexia Cardona, Hugo Tavares, Martin van Rongen"
+title: "Coding for research"
+author: "Hugo Tavares, Alexia Cardona, Martin van Rongen"
 date: today
 number-sections: false
 ---
 
 ## Overview 
 
-These sessions provide an introduction to coding in R. The aim is to get you comfortable with coding techniques commonly used in scientific research.
+These sessions provide an introduction to coding in R and Python. The aim is to get you comfortable with coding techniques commonly used in scientific research.
 
 ::: {.callout-tip}
 ### Learning Objectives
 
-- Get familiar with the R programming language
+- Get familiar with the R or Python programming language
 - Learn to visualise data
 - Be able to manipulate and transform data
 :::

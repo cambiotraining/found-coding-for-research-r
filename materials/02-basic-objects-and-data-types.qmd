@@ -24,9 +24,16 @@ To do this, we *assign* values to *objects*. An object acts as a container for t
 To create an object, we need to give it a name followed by the
 assignment operator `<-`, and the value we want to give it, for example:
 
+::: {.panel-tabset group="language"}
+## R
+
 ```{r}
 temperature <- 23
 ```
+
+We can read the code as: the value `23` is assigned to the object `temperature`. Note that when you run this line of code the object you just created appears on your environment tab (top-right panel).
+
+When assigning a value to an object, R does not print anything on the console. You can print the value by typing the object name on the console.
 
 ::: {.callout-important}
 ## The assignment operator
@@ -34,22 +41,8 @@ temperature <- 23
 In R we use `<-` as the assignment operator. It assigns values on the right to objects on
 the left. So, after executing:
 
-```{r}
-#| eval: false
+In RStudio, typing <kbd>Alt</kbd> + <kbd>-</kbd> (push <kbd>Alt</kbd> at the same time as the <kbd>-</kbd> key) will write ` <- ` in a single keystroke on a PC, while typing <kbd>Option</kbd> + <kbd>-</kbd> (push <kbd>Option</kbd> at the same time as the <kbd>-</kbd> key) does the same on a Mac.
 
-x <- 3
-```
-
-the value of `x` is `3`. You can think of it as 3 **goes into** `x`.
-
-For historical reasons you can also use `=` for assignments, but not in every context. Because of the
-[slight](http://blog.revolutionanalytics.com/2008/12/use-equals-or-arrow-for-assignment.html)
-[differences](http://r.789695.n4.nabble.com/Is-there-any-difference-between-and-tp878594p878598.html)
-in syntax, it is good practice to always use `<-` for assignments.
-
-In RStudio, typing <kbd>Alt</kbd> + <kbd>-</kbd> (push <kbd>Alt</kbd> at the
-same time as the <kbd>-</kbd> key) will write ` <- ` in a single keystroke on a PC, while typing <kbd>Option</kbd> + <kbd>-</kbd> (push <kbd>Option</kbd> at the
-same time as the <kbd>-</kbd> key) does the same on a Mac.
 :::
 
 Objects can be given almost any name such as `x`, `current_temperature`, or
@@ -58,30 +51,73 @@ Objects can be given almost any name such as `x`, `current_temperature`, or
 ::: {.callout-warning}
 ## Restrictions on object names
 
-* Object names are not allowed to start with a number (`2x` is not valid, but `x2` is).
-* R is case sensitive (e.g., `weight_kg` is different from `Weight_kg`).
+Object names can contain letters, numbers, underscores and periods. They *cannot start with a number nor contain spaces*. Different people use different conventions for long variable names, two common ones being:
+
+Underscore: my_long_named_object
+
+Camel case: myLongNamedObject
+
+What you use is up to you, but be consistent. R is **case-sensitive** so `temperature` is different from `Temperature.`
+
 * Some names are forbidden, because they are the names of fundamental functions in R (e.g.,
 `if`, `else`, `for`, see
 [here](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Reserved.html)
 for a complete list).
-* Generally, avoid using other function names (e.g., `c`, `T`, `mean`, `data`, `df`, `weights`), even if it is allowed. If in doubt, check the help to see if the name is already in use.
-* Avoid dots (`.`) within an object name as in `my.dataset`. There are many
-functions in R with dots in their names for historical reasons, but because dots
-have a special meaning in R (for methods) and other programming languages, it's
-best to avoid them.
-* It's important to be consistent in the **styling** of your
-code (where you put spaces, how you name objects, etc.). Using a consistent
-coding style makes your code clearer to read for your future self and your
-collaborators. In R, popular style guides are:
+* Avoid using function names (e.g., `c`, `T`, `mean`, `data`, `df`, `weights`), even if allowed. If in doubt, check the help to see if the name is already in use.
+* Avoid full-stops (`.`) within an object name as in `my.data`. Full-stops often have meaning in programming languages, so it's best to avoid them.
+* Use consistent styling. In R, popular style guides are:
   * [tidyverse's](http://style.tidyverse.org/).
   * [Google's](https://google.github.io/styleguide/Rguide.xml)
-  
-You can install the [`lintr`](https://github.com/jimhester/lintr) package to automatically check
-for issues in the styling of your code.
+
+**Whatever style you use, be consistent!**
+:::
 :::
 
 ### Using objects
-LO: using objects (calculations etc)
+
+Now that we have the `temperature` in memory, we can use it to perform operations. For example, this might the temperature in Celsius and we might want to calculate it to Kelvin.
+
+To do this, we need to add `273.15`:
+
+::: {.panel-tabset group="language"}
+## R
+
+```{r}
+temperature + 273.15
+```
+:::
+
+We can change an object's value by assigning a new one:
+
+::: {.panel-tabset group="language"}
+## R
+
+```{r}
+temperature <- 36
+temperature + 273.15
+```
+:::
+
+Finally, assigning a value to one object does not change the values of other objects. For example, let’s store the outcome in Kelvin into a new object `temp_K`:
+
+::: {.panel-tabset group="language"}
+## R
+
+```{r}
+temp_K <- temperature + 273.15
+```
+:::
+
+Changing the value of `temperature` does not change the value of `temp_K`.
+
+::: {.panel-tabset group="language"}
+## R
+
+```{r}
+temperature <- 14
+temp_K
+```
+:::
 
 ### Vectors
 
