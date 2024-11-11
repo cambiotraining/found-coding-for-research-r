@@ -251,14 +251,14 @@ It's always a good idea to add explanations to your code. We can do that with th
 
 It's always a good idea to add lots of comments to your code. What makes sense to you in that moment, might not a week later. Similarly, when sharing code with colleagues and collaborators, it's always good to be as clear as possible.
 
-### Code headings
+### Splitting code
 
 As you increase your code, your script can become quite long. Often we want to split analyses into multiple scripts, for example:
 
-* `01_preprocessing.R` may contain data cleaning steps
-* `02_exploration.R` may contain exploratory plots of your data
-* `03_analysis.R` could contain (statistical) analyses of your data
-* `04_figures.R` could contain code for figures, ready for publication
+* `01_preprocessing` may contain data cleaning steps
+* `02_exploration` may contain exploratory plots of your data
+* `03_analysis` could contain (statistical) analyses of your data
+* `04_figures` could contain code for figures, ready for publication
 
 Each of these files could be hundreds of lines long. So, keeping track of your code makes sense. We can do that with **code headings**, which use the `# heading ----` syntax. You can even add different heading levels, by increasing the number of `#` at the start.
 
@@ -268,7 +268,7 @@ This creates a little table of contents in the bottom-left corner of the script 
 
 ## Running code {#running-code}
 
-The simplest way of a programming language is to use it interactively. We can do this by typing directly into the console.
+The simplest way of using a programming language is to use it interactively. We can do this by typing directly into the console / terminal.
 
 ::: {.panel-tabset group="language"}
 ## R
@@ -294,6 +294,7 @@ For example, you can use Python as a glorified calculator:
 Running code like this directly in the console is generally not a good idea, because then we can't keep track of what we are doing. So, we first need to create a script to save our code in. Then, we can then play around.
 
 ::: {.callout-important}
+## Complete before proceeding
 Please complete @ex-createscript and @ex-runningcode.
 :::
 
