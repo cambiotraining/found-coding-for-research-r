@@ -266,12 +266,14 @@ This creates a little table of contents in the bottom-left corner of the script 
 
 ![Code headings](images/rstudio-codeheadings.png)
 
-## Running code
+## Running code {#running-code}
 
-The simplest way of using R is to type directly into the console. For example, you can use R as a glorified calculator:
+The simplest way of a programming language is to use it interactively. We can do this by typing directly into the console.
 
 ::: {.panel-tabset group="language"}
 ## R
+
+For example, you can use R as a glorified calculator:
 
 ```{r}
 3 + 5
@@ -279,6 +281,8 @@ The simplest way of using R is to type directly into the console. For example, y
 ```
 
 ## Python
+
+For example, you can use Python as a glorified calculator:
 
 ```{python}
 3 + 5

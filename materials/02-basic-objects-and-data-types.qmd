@@ -1,5 +1,5 @@
 ---
-title: Objects & data types
+title: Data types & structures
 ---
 
 ::: {.callout-tip}
@@ -13,16 +13,58 @@ title: Objects & data types
 
 We’ve seen examples where we entered data directly into a function. Most of the time we have data from elsewhere, such as a spreadsheet. In the previous section we created single objects. We’ll build up from this and introduce vectors and tabular data. We'll also briefly mention other data types, such as matrices, arrays.
 
+## Explained: Data types & structures
+
+### Data types
+
+Programming languages are able to deal with different data types - and they need to. For example, it makes little sense to perform mathematical operations on text! To ensure that your data is viewed in the appropriate way, you need to be aware of some of the different **data types**.
+
+::: {.panel-tabset group="language"}
+## R
+
+R has the following main data types:
+
+| Data type | Description|
+|-----------|--------------------------------------------------------------|
+| numeric   | Represents numbers; can be whole (integers) or decimals \
+(e.g., `19`or `2.73`).|
+| integer   | Specific type of numeric data; can only be an integer \
+(e.g., `7L` where `L` indicates an integer). |
+| character | Also called *text* or *string* \
+(e.g., `"Rabbits are great!"`).|
+| logical   | Also called *boolean values*; takes either `TRUE` or `FALSE`.|
+| factor    | A type of categorical data that can have inherent ordering \
+(e.g., `low`, `medium`, `high`).|
+
+
+## Python
+
+Python has the following main data types:
+
+| Data type | Description|
+|-----------|--------------------------------------------------------------|
+| int       | Specific type of numeric data; can only be an integer \
+(e.g., `7` or `56`).|
+| float     | Decimal numbers \
+(e.g., `3.92` or `9.824`).|
+| str       | *Text* or *string* data \
+(e.g., `"Rabbits are great!"`).|
+| bool      | *Logical* or *boolean* values; takes either `True` or `False`.|
+
+:::
+
+### Data structures
+
+In the section on [running code](#running-code) we saw how we can run code interactively. However, we frequently need to save values so we can work with them. We've just seen that we can have different *types* of data. We can save these into different *data structures*. Which data structure you need is often determined by the type of data and the complexity.
+
+In the following sections we look at simple data structures.
+
 ## Objects
 
-### Creating objects
-
-Just running lines of code can be helpful if you only need an answer, but in order to do useful and interesting things, we often need to save values so we can work with them.
-
-To do this, we *assign* values to *objects*. An object acts as a container for that value.
+We can store values into *objects*. To do this, we *assign* values to them. An object acts as a container for that value.
 
 To create an object, we need to give it a name followed by the
-assignment operator `<-`, and the value we want to give it, for example:
+assignment operator and the value we want to give it, for example:
 
 ::: {.panel-tabset group="language"}
 ## R
@@ -31,18 +73,38 @@ assignment operator `<-`, and the value we want to give it, for example:
 temperature <- 23
 ```
 
-We can read the code as: the value `23` is assigned to the object `temperature`. Note that when you run this line of code the object you just created appears on your environment tab (top-right panel).
+We can read the code as: the value `23` is assigned (`<-`) to the object `temperature`. Note that when you run this line of code the object you just created appears on your environment tab (top-right panel).
 
-When assigning a value to an object, R does not print anything on the console. You can print the value by typing the object name on the console.
+When assigning a value to an object, R does not print anything on the console. You can print the value by typing the object name on the console or within your script and running that line of code.
+
+## Python
+
+```{python}
+temperature = 23
+```
+
+We can read the code as: the value `23` is assigned (`=`) to the object `temperature`.
+
+When assigning a value to an object, Python does not print anything on the console. You can print the value by typing the object name on the console or within your script and running that line of code.
+
+:::
 
 ::: {.callout-important}
 ## The assignment operator
 
-In R we use `<-` as the assignment operator. It assigns values on the right to objects on
-the left. So, after executing:
+We use an assignment operator to assign values on the right to objects on the left.
 
-In RStudio, typing <kbd>Alt</kbd> + <kbd>-</kbd> (push <kbd>Alt</kbd> at the same time as the <kbd>-</kbd> key) will write ` <- ` in a single keystroke on a PC, while typing <kbd>Option</kbd> + <kbd>-</kbd> (push <kbd>Option</kbd> at the same time as the <kbd>-</kbd> key) does the same on a Mac.
+::: {.panel-tabset group="language"}
+## R
+In R we use `<-` as the assignment operator.
 
+In RStudio, typing <kbd>Alt</kbd> + <kbd>-</kbd> (push <kbd>Alt</kbd> at the same time as the <kbd>-</kbd> key) will write ` <- ` in a single keystroke on a PC, while typing <kbd>Option</kbd> + <kbd>-</kbd> (push <kbd>Option</kbd> at the same time as the <kbd>-</kbd> key) does the same on a Mac. <br /><br />
+
+## Python
+In Python we use `=` as the assignment operator. <br /><br />
+
+:::
+\
 :::
 
 Objects can be given almost any name such as `x`, `current_temperature`, or
@@ -57,20 +119,16 @@ Underscore: my_long_named_object
 
 Camel case: myLongNamedObject
 
-What you use is up to you, but be consistent. R is **case-sensitive** so `temperature` is different from `Temperature.`
+What you use is up to you, but be consistent. Programming languages are **case-sensitive** so `temperature` is different from `Temperature.`
 
-* Some names are forbidden, because they are the names of fundamental functions in R (e.g.,
-`if`, `else`, `for`, see
-[here](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Reserved.html)
-for a complete list).
+* Some names are reserved words or keywords, because they are the names of fundamental functions (e.g., `if`, `else`, `for`, see [R](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Reserved.html) or [Python](https://docs.python.org/3/reference/lexical_analysis.html#keywords) for a complete list).
 * Avoid using function names (e.g., `c`, `T`, `mean`, `data`, `df`, `weights`), even if allowed. If in doubt, check the help to see if the name is already in use.
 * Avoid full-stops (`.`) within an object name as in `my.data`. Full-stops often have meaning in programming languages, so it's best to avoid them.
 * Use consistent styling. In R, popular style guides are:
-  * [tidyverse's](http://style.tidyverse.org/).
+  * [R's tidyverse's](http://style.tidyverse.org/).
   * [Google's](https://google.github.io/styleguide/Rguide.xml)
 
 **Whatever style you use, be consistent!**
-:::
 :::
 
 ### Using objects
@@ -85,6 +143,12 @@ To do this, we need to add `273.15`:
 ```{r}
 temperature + 273.15
 ```
+
+## Python
+
+```{python}
+temperature + 273.15
+```
 :::
 
 We can change an object's value by assigning a new one:
@@ -94,6 +158,13 @@ We can change an object's value by assigning a new one:
 
 ```{r}
 temperature <- 36
+temperature + 273.15
+```
+
+## Python
+
+```{python}
+temperature = 36
 temperature + 273.15
 ```
 :::
@@ -106,6 +177,12 @@ Finally, assigning a value to one object does not change the values of other obj
 ```{r}
 temp_K <- temperature + 273.15
 ```
+
+## Python
+
+```{python}
+temp_K = temperature + 273.15
+```
 :::
 
 Changing the value of `temperature` does not change the value of `temp_K`.
@@ -117,15 +194,171 @@ Changing the value of `temperature` does not change the value of `temp_K`.
 temperature <- 14
 temp_K
 ```
+
+## Python
+
+```{python}
+temperature = 14
+temp_K
+```
 :::
 
-### Vectors
+## Collections of data
 
-* LO: create vectors
-* LO: operations with vectors
-* LO: subsetting (indices, conditionals with TRUE/FALSE)
+In the examples above we have stored single values into an object. Of course we often have to deal with more than tat. Generally speaking, we can create **collections** of data. This enables us to organise our data, for example by creating a collection of numbers or text values.
 
-### Dealing with missing data
+### Creating collections
+
+Creating a collection of data is pretty straightforward, particularly if you are manually doing it.
+
+::: {.panel-tabset group="language"}
+## R
+
+The simplest collection of data in R is called a **vector**. This really is the workhorse of R.
+
+A vector is composed by a series of values, which can numbers, text or any of the data types described.
+
+We can assign a series of values to a vector using the `c()` function. For example, we can create a vector of temperatures and assign it to a new object `temp_c`:
+
+```{r}
+temp_c <- c(23, 24, 31, 27, 18, 21)
+
+temp_c
+```
+
+A vector can also contain text. For example, let's create a vector that contains weather descriptions:
+
+```{r}
+weather <- c("sunny", "cloudy", "partial_cloud", "cloudy", "sunny", "rainy")
+
+weather
+```
+
+## Python
+
+The simplest collection of data in Python is either a **list** or a **tuple**. Both can hold items of the same of different types. Whereas a tuple *cannot* be changed after it's created, a *list* can.
+
+We can assign a collection of numbers to a list:
+
+```{python}
+temp_c = [23, 24, 31, 27, 18, 21]
+
+temp_c
+```
+
+
+A list can also contain text. For example, let's create a list that contains weather descriptions:
+
+```{python}
+weather = ["sunny", "cloudy", "partial_cloud", "cloudy", "sunny", "rainy"]
+
+weather
+```
+
+We can also create a *tuple*. Remember, this is like a list, but it cannot be altered after creating it. Note the difference in the type of brackets, where we use `( )` round brackets instead of `[ ]` square brackets:
+
+```{python}
+temp_c_tuple = (23, 24, 31, 27, 18, 21)
+```
+
+:::
+
+Note that when we define text (e.g. `"cloudy"` or `"sunny"`), we need to use quotes.
+
+When we deal with numbers - whole or decimal (e.g. `23`, `18.5`) - we do not use quotes.
+
+
+::: {.callout-important}
+## Having a type
+
+Different data types result in slightly different types of objects. It can be quite useful to check how your data is viewed by the computer.
+
+::: {.panel-tabset group="language"}
+## R
+
+We can use the `class()` function to find out how R views our data. This function also works for more complex data structures.
+
+Let's do this for our examples:
+
+```{r}
+class(temp_c)
+```
+
+```{r}
+class(weather)
+```
+
+## Python
+
+We can use the `type()` function to find out how Python views our data. This function also works for more complex data structures.
+
+Let's do this for our examples:
+
+```{python}
+type(temp_c)
+```
+
+```{python}
+type(weather)
+```
+
+```{python}
+type(temp_c_tuple)
+```
+
+
+:::
+:::
+
+### Making changes
+
+Quite often we would want to make some changes to a collection of data. There are different ways we can do this.
+
+Let's say we gathered some new temperature data and stored this into an object called `temp_new`.
+
+::: {.panel-tabset group="language"}
+## R
+
+```{r}
+temp_new <- c(5, 16, 8, 12)
+```
+
+
+## Python
+
+```{python}
+temp_new = [5, 16, 8, 12]
+```
+
+:::
+
+Next, we wanted to combine these new data with the original data, which we stored in `temp_c`.
+
+::: {.panel-tabset group="language"}
+## R
+
+Again, we can use the `c()` function:
+
+```{r}
+c(temp_c, temp_new)
+```
+
+## Python
+
+We can use the `+` operator to add the two lists together:
+
+```{python}
+temp_c + temp_new
+```
+
+
+:::
+
+### Subsetting
+
+(indices, conditionals with TRUE/FALSE)
+
+## Dealing with missing data
 
 * LO: why is missing data important?
 * LO: good practices of dealing with missing data
