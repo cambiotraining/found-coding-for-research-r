@@ -314,7 +314,29 @@ type(temp_c_tuple)
 
 Quite often we would want to make some changes to a collection of data. There are different ways we can do this.
 
-Let's say we gathered some new temperature data and stored this into an object called `temp_new`.
+Let's say we gathered some new temperature data and wanted to add this to the original `temp_c` data.
+
+::: {.panel-tabset group="language"}
+## R
+
+We'd use the `c()` function to combine the new data:
+
+```{r}
+c(temp_c, 22, 34)
+```
+
+
+## Python
+
+We take the original `temp_c` list and add the new values:
+
+```{python}
+temp_c + [22, 34]
+```
+
+:::
+
+Let's consider another scenario. Again, we went out to gather some new temperature data, but this time we stored the measurements into an object called `temp_new` and wanted to add these to the original `temp_c` data.
 
 ::: {.panel-tabset group="language"}
 ## R
@@ -323,19 +345,7 @@ Let's say we gathered some new temperature data and stored this into an object c
 temp_new <- c(5, 16, 8, 12)
 ```
 
-
-## Python
-
-```{python}
-temp_new = [5, 16, 8, 12]
-```
-
-:::
-
 Next, we wanted to combine these new data with the original data, which we stored in `temp_c`.
-
-::: {.panel-tabset group="language"}
-## R
 
 Again, we can use the `c()` function:
 
@@ -345,10 +355,54 @@ c(temp_c, temp_new)
 
 ## Python
 
+```{python}
+temp_new = [5, 16, 8, 12]
+```
+
 We can use the `+` operator to add the two lists together:
 
 ```{python}
 temp_c + temp_new
+```
+
+:::
+
+### Number sequences
+
+We often need to create sequences of numbers when analysing data. There are some useful shortcuts available to do this, which can be used in different situations. Run the following code to see the output.
+
+::: {.panel-tabset group="language"}
+## R
+
+```{r}
+#| eval: false
+
+1:10                                # integers from 1 to 10
+10:1                                # integers from 10 to 1
+seq(1, 10, by = 2)                  # from 1 to 10 by steps of 2
+seq(10, 1, by = -0.5)               # from 10 to 1 by steps of -0.5
+seq(1, 10, length.out = 20)         # 20 equally spaced values from 1 to 10
+```
+
+
+## Python
+
+Python has some built-in functionality to deal with number sequences, but the `numpy` library is particularly helpful. We installed and loaded it previously, but if needed, re-run the following:
+
+```{python}
+import numpy as np
+```
+
+Next, we can create several different number sequences:
+
+```{python}
+#| eval: false
+
+list(range(1, 11))                 # integers from 1 to 10
+list(range(10, 0, -1))             # integers from 10 to 1
+list(range(1, 11, 2))              # from 1 to 10 by steps of 2
+list(np.arange(10, 1, -0.5))       # from 10 to 1 by steps of -0.5
+list(np.linspace(1, 10, num = 20)) # 20 equally spaced values from 1 to 10
 ```
 
 
@@ -356,7 +410,65 @@ temp_c + temp_new
 
 ### Subsetting
 
-(indices, conditionals with TRUE/FALSE)
+Sometimes we want to extract one or more values from a collection of data. We will go into more detail later, but for now we'll see how to do this on the simple data structures we've covered so far.
+
+::: {.callout-warning collapse="true"}
+## Technical: Differences in indexing between R and Python
+
+In the course materials we keep R and Python separate in most cases. However, if you end up using both languages at some point then it's important to be aware about some key differences. One of them is **indexing**.
+
+Each item in a collection of data has a number, called an *index*. Now, it would be great if this was consistent across all programming languages, but it's not.
+
+R uses **1-based indexing** whereas Python uses **zero-based indexing**. What does this mean? Compare the following:
+
+```{r}
+#| eval: false
+
+plants <- c("tree", "shrub", "grass") # the index of "tree" is 1, "shrub" is 2 etc.
+```
+
+```{python}
+#| eval: false
+
+plants = ["tree", "shrub", "grass"]   # the index of "tree" is 0, "shrub" is 1 etc.  
+```
+
+
+Behind the scenes of any programming language there is a lot of counting going on. So, it matters if you count starting at zero or one. So, if I'd ask:
+
+"Hey, R - give me the items with index 1 and 2 in `plants`" then I'd get `tree` and `shrub`. 
+
+If I'd ask that question in Python, then I'd get `shrub` and `grass`. Fun times.
+:::
+
+::: {.panel-tabset group="language"}
+## R
+
+In R we can use square brackets `[ ]` to extract values. Let's explore this using our `weather` object.
+
+```{r}
+weather          # remind ourselves of the data
+weather[2]       # extract the second value
+weather[2:4]     # extract the second to fourth value
+weather[c(3, 1)] # extract the third and first value
+weather[-1]      # extract all apart from the first value
+```
+
+## Python
+
+Let's explore this using our `weather` object.
+
+```{python}
+weather          # remind ourselves of the data
+weather[1]       # extract the second value
+weather[1:4]     # extract the second to fourth value (end index is exclusive)
+weather[2], weather[0] # extract the third and first value
+weather[1:]      # extract all apart from the first value
+```
+
+:::
+
+
 
 ## Dealing with missing data
 

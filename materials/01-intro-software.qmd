@@ -437,7 +437,7 @@ It's good practice be explicit about the names of the arguments. That way you ca
 
 ## Adding functionality using packages
 LO: adding functionality (installing + loading packages)
-
+LO: For Python: requires `numpy` for next section
 
 
 ## Exercises
@@ -446,27 +446,31 @@ LO: adding functionality (installing + loading packages)
 #### Creating a working directory
 {{< level 1 >}}
 
-Create a working directory called `data-analysis-r`. When you've done this, add the following sub folders:
+Create a working directory called `data-analysis`. When you've done this, add the following sub folders:
 
 * `data`
 * `scripts`
 * `images`
 
-**Note**: R is case-sensitive, so `data` is not treated the same way as `data`.
+**Note**: programming languages are case-sensitive, so `data` is not treated the same way as `data`.
 :::
 
 :::{.callout-exercise #ex-createscript}
 #### Creating a script
 {{< level 1 >}}
 
-Create a script and save it as `session_01.R` in the `scripts` folder within your working directory.
+Create a script and save it as `session_01` in the `scripts` folder within your working directory.
+
+:::{.callout-hint}
+Remember, you will need to add an extension to the file. This is `.R` for R scripts or `.py` for Python ones.
+:::
 :::
 
 :::{.callout-exercise #ex-runningcode}
 #### Running code
 {{< level 1 >}}
 
-In your new script `session_01.R`, run some mathematical operations, such as:
+In your new script `session_01`, run some mathematical operations, such as:
 
 ```{r}
 #| eval: false
