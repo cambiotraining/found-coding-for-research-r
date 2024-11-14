@@ -203,13 +203,18 @@ temp_K
 ```
 :::
 
+### Updating objects
+
+> LO: update objects in R
+> LO: update objects in Python & demonstrate lack of updates in tuples
+
 ## Collections of data
 
 In the examples above we have stored single values into an object. Of course we often have to deal with more than tat. Generally speaking, we can create **collections** of data. This enables us to organise our data, for example by creating a collection of numbers or text values.
 
 ### Creating collections
 
-Creating a collection of data is pretty straightforward, particularly if you are manually doing it.
+Creating a collection of data is pretty straightforward, particularly if you are doing it manually.
 
 ::: {.panel-tabset group="language"}
 ## R

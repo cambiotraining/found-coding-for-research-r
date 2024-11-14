@@ -453,7 +453,7 @@ Create a working directory called `data-analysis`. When you've done this, add th
 * `scripts`
 * `images`
 
-**Note**: programming languages are case-sensitive, so `data` is not treated the same way as `data`.
+**Note**: programming languages are case-sensitive, so `data` is not treated the same way as `Data`.
 :::
 
 :::{.callout-exercise #ex-createscript}
