@@ -13,6 +13,20 @@ We now have a good grasp of how data is commonly structured, with variables in c
 
 ## Introducing plotting
 
+To create a plot we'll need three things:
+
+1. data
+2. mapping aesthetics
+3. specify the type of plot
+
+::: {.panel-tabset group="language"}
+## R
+
+
+## Python
+
+:::
+
 ### Start plotting
 * LO: plotting with ggplot2
 
