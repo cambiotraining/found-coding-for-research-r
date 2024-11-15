@@ -5,7 +5,11 @@ title: Data types & structures
 ::: {.callout-tip}
 #### Learning objectives
 
-- 
+- Create familiarity with the most common data types
+- Know about basic data structures
+- Create, use and make changes to objects
+- Create, use and make changes to collections of data
+- Deal with missing data
 :::
 
 
@@ -113,15 +117,18 @@ Objects can be given almost any name such as `x`, `current_temperature`, or
 ::: {.callout-warning}
 ## Restrictions on object names
 
-Object names can contain letters, numbers, underscores and periods. They *cannot start with a number nor contain spaces*. Different people use different conventions for long variable names, two common ones being:
+Object names can contain letters, numbers, underscores and periods.
 
-Underscore: my_long_named_object
+They *cannot start with a number nor contain spaces*.
+Different people use different conventions for long variable names, two common ones being:
 
-Camel case: myLongNamedObject
+Underscore: `my_long_named_object`
+
+Camel case: `myLongNamedObject`
 
 What you use is up to you, but be consistent. Programming languages are **case-sensitive** so `temperature` is different from `Temperature.`
 
-* Some names are reserved words or keywords, because they are the names of fundamental functions (e.g., `if`, `else`, `for`, see [R](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Reserved.html) or [Python](https://docs.python.org/3/reference/lexical_analysis.html#keywords) for a complete list).
+* Some names are reserved words or keywords, because they are the names of core functions (e.g., `if`, `else`, `for`, see [R](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Reserved.html) or [Python](https://docs.python.org/3/reference/lexical_analysis.html#keywords) for a complete list).
 * Avoid using function names (e.g., `c`, `T`, `mean`, `data`, `df`, `weights`), even if allowed. If in doubt, check the help to see if the name is already in use.
 * Avoid full-stops (`.`) within an object name as in `my.data`. Full-stops often have meaning in programming languages, so it's best to avoid them.
 * Use consistent styling. In R, popular style guides are:
@@ -474,16 +481,90 @@ weather[1:]      # extract all apart from the first value
 :::
 
 
-
 ## Dealing with missing data
 
-* LO: why is missing data important?
-* LO: good practices of dealing with missing data
+It may seem weird that you have to consider what isn't there, but that's exactly what we do when we have missing data. Ideally, when we're collecting data we entries for every single thing we measure. But, alas, life is messy. That one patient may have missed an appointment, or one eppendorf tube got dropped, or etc etc.
+
+::: {.panel-tabset group="language"}
+## R
+
+R includes the concept of missing data, meaning we can specify that a data point is missing. Missing data are represented as `NA`.
+
+When doing operations on numbers, most functions will return `NA` if the data you are working with include missing values. This makes it harder to overlook the cases where you are dealing with missing data. This is a good thing!
+
+For example, let's look at the following data, where we have measured six different patients and recorded their systolic blood pressure.
+
+```{r}
+systolic_pressure <- c(125, 134, NA, 145, NA, 141)
+```
+
+We can see that we're missing measurements for two of them. If we want to calculate the average systolic blood pressure across these patients, then we could use the `mean()` function. However, this does not result in `NA`.
+
+```{r}
+mean(systolic_pressure)
+```
+
+You can add the argument `na.rm = TRUE` to various functions - including `mean()` - to calculate the result while ignoring the missing values. This stands for "remove missing values".
+
+```{r}
+mean(systolic_pressure, na.rm = TRUE)
+```
+
+There are quite a few ways that you can deal with missing data and we'll discuss more of them in later sessions.
+
+## Python
+
+The built-in functionality of Python is not very good at dealing with missing data. This means that you normally need to deal with them manually.
+
+One of the ways you can denote missing data in Python is with `None`. Let's look at the following data, where we have measured six different patients and recorded their systolic blood pressure.
+
+```{python}
+systolic_pressure = [125, 134, None, 145, None, 141]
+```
+
+Next, we'd have to filter out the missing values (don't worry about the exact meaning of the code at this point):
+
+```{python}
+filtered_data = [x for x in systolic_pressure if x is not None]
+```
+
+And lastly we would be able to calculate the mean value:
+
+```{python}
+sum(filtered_data) / len(filtered_data)
+```
+
+There are quite a few (easier!) ways that you can deal with missing data and we'll discuss more of them in later sessions, once we start dealing with tabular data.
+:::
+
+::: {.callout-note}
+## To exclude or not exclude?
+
+It may be tempting to simply remove all observations that contain missing data. It often makes the analysis easier! However, there is good reason to be more subtle: throwing away good data.
+
+Let's look at the following hypothetical data set, where we use `NA` to denote missing values. We are interested in the average weight and age across the patients.
+
+```
+patient_id    weight_kg   age
+N982          72          47
+N821          68          49
+N082          NA          63
+N651          78          NA
+```
+
+We could remove all the rows that contain *any* missing data, thereby getting rid of the last two observations. However, that would mean we'd lose data on `age` from the penultimate row, and data on `weight_kg` from the last row.
+
+Instead, it would be better to tell the computer to ignore missing values on a variable-by-variable basis and calculate the averages on the data that *is* there.
+:::
 
 ## Summary
 
 ::: {.callout-tip}
 #### Key points
 
-- 
+- The most common data types include numerical, text and logical data.
+- We can store data in single objects, enabling us to use the data
+- Multiple data points and types can be stored as different collections of data
+- We can make changes to objects and collections of data
+- We need to be explicit about missing data
 :::
