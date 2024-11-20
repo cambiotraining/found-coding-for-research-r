@@ -1,17 +1,21 @@
 book:
   chapters:
-    - part: "Getting started with coding"
+    - part: "S1: Getting started"
       chapters:
         - materials/01-intro-software.qmd
         - materials/02-basic-objects-and-data-types.qmd
+    - part: "S2: Data & plotting"
+      chapters:
         - materials/03-tabular-data.qmd
         - materials/04-plotting.qmd
-    - part: "Data wrangling and visualisation"
+    - part: "S3: Manipulating data"
       chapters:
-        - materials/05-manipulating-columns.qmd
-        - materials/06-chaining-operations.qmd
-        - materials/07-manipulating-rows.qmd
-        - materials/08-grouped-operations.qmd
-        - materials/09-data-types.qmd
+        - materials/05-data-types.qmd
+        - materials/06-manipulating-columns.qmd
+        - materials/07-chaining-operations.qmd
+        - materials/08-manipulating-rows.qmd
+        - materials/09-grouped-operations.qmd
+    - part: "S4: Organise and combine"
+      chapters:
         - materials/10-reshaping-data.qmd
         - materials/11-combining-data.qmd

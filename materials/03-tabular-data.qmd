@@ -17,6 +17,8 @@ In the previous section we dealt with single objects and vectors. Here we expand
 * LO: understand data frames; matrices
 * LO: exploring structure of tabular data
 
+!["Tabular data](images/tabular_data.png)
+
 ## Working with data
 
 * LO: read in CSV file; TSV; specifying how to deal with missing data

@@ -5,12 +5,10 @@ date: today
 number-sections: false
 ---
 
-## Overview 
-
 These sessions provide an introduction to coding in R and Python. The aim is to get you comfortable with coding techniques commonly used in scientific research.
 
 ::: {.callout-tip}
-### Learning Objectives
+### Learning objectives
 
 - Get familiar with the R or Python programming language
 - Learn to visualise data
