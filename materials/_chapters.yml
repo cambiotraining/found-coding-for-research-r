@@ -10,12 +10,11 @@ book:
         - materials/04-plotting.qmd
     - part: "S3: Manipulating data"
       chapters:
-        - materials/05-data-types.qmd
-        - materials/06-manipulating-columns.qmd
-        - materials/07-chaining-operations.qmd
-        - materials/08-manipulating-rows.qmd
-        - materials/09-grouped-operations.qmd
+        - materials/05-manipulating-columns.qmd
+        - materials/06-chaining-operations.qmd
+        - materials/07-manipulating-rows.qmd
+        - materials/08-grouped-operations.qmd
     - part: "S4: Organise and combine"
       chapters:
-        - materials/10-reshaping-data.qmd
-        - materials/11-combining-data.qmd
+        - materials/09-reshaping-data.qmd
+        - materials/10-combining-data.qmd

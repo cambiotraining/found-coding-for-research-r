@@ -19,9 +19,32 @@ We’ve seen examples where we entered data directly into a function. Most of th
 
 ## Explained: Data types & structures
 
-### Data types
+Computers are picky when it comes to data and they like consistency. As such, it's good to be aware of the fact that data can be viewed or interpreted in different ways by the computer.
 
-Programming languages are able to deal with different data types - and they need to. For example, it makes little sense to perform mathematical operations on text! To ensure that your data is viewed in the appropriate way, you need to be aware of some of the different **data types**.
+For example, you might have research data the presence or absence of a tumour is scored. This would often be recorded as `0` when absent and `1` as present. Your computer views these values as numbers and would happily calculate the average of those values. Not ideal, because a tumour being, on average, `0.3` present makes no sense!
+
+So, it makes sense to spend a bit of time looking at your data and making sure that the computer sees it in the correct way.
+
+### Quantitative data
+
+#### Discrete data
+LO: discrete data
+
+#### Continuous data
+LO: continuous data
+
+### Qualitative data
+
+#### Categories
+LO: categories (nominal data)
+
+#### Ordinal data
+LO: factors (ordinal data)
+
+
+### Getting the computer to see the right way
+
+In general, computers can view these different types of data in specific ways.
 
 ::: {.panel-tabset group="language"}
 ## R
