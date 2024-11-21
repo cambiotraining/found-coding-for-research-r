@@ -17,7 +17,7 @@ In the previous section we dealt with single objects and vectors. Here we expand
 * LO: understand data frames; matrices
 * LO: exploring structure of tabular data
 
-!["Tabular data](images/tabular_data.png)
+![An example of tabular data](images/tabular_data.png){#fig-tabular_data}
 
 ## Working with data
 
