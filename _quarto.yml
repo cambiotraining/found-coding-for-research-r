@@ -13,7 +13,9 @@ project:
     - materials/*
     - "!materials/*/no_render"
 
-format: courseformat-html
+format:
+  courseformat-html:
+    theme: flatly
 
 exercises:
   number: true
@@ -21,6 +23,7 @@ exercises:
 
 filters:
   - courseformat
+  - auto-dark
 
 execute:
   freeze: auto

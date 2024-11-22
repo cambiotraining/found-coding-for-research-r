@@ -33,6 +33,22 @@ To create a plot we'll need three things:
 ### Building up plots
 * LO: layering plots
 
+```{r}
+#| message: false
+
+library(tidyverse)
+
+surveys <- read_csv("data/surveys.csv")
+```
+
+
+```{r}
+#| warning: false
+ggplot(data = surveys,
+       mapping = aes(x = weight, y = hindfoot_length)) +
+  geom_point()
+```
+
 ### Changing plots
 * LO: changing aesthetics (colour, fill, transparency, size)
 
